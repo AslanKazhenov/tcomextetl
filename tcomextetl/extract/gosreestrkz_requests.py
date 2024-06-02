@@ -153,7 +153,7 @@ class GosreestrKzRequests(HttpRequest):
     # Обрабатывает идентификаторы компании и контакта, пытаясь получить о компании.
     def process_company_id(self, company_id, contact_id):
         attempt = 0
-        max_attempts = 20
+        max_attempts = 20  # Count of attempts to connect
         while attempt < max_attempts:
             try:
                 self._raw = self.get_request_url()
@@ -170,7 +170,7 @@ class GosreestrKzRequests(HttpRequest):
     # Обрабатывает идентификаторы компании и контакта, пытаясь получить данные о контактах компании.
     def process_contact_id(self, company_id, contact_id):
         attempt = 0
-        max_attempts = 20
+        max_attempts = 20  # Count of attempts to connect
         while attempt < max_attempts:
             try:
                 self._raw = self.get_request_url()
